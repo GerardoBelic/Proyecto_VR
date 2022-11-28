@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using ZXing;
+using System;
 
 /// From https://www.youtube.com/watch?v=c6NXkZWXHnc
 
@@ -14,6 +16,8 @@ public class PhoneCamera : MonoBehaviour
 
     public RawImage background;
     public AspectRatioFitter fit;
+
+    string QrCode = string.Empty;
 
     void Start()
     {
@@ -39,6 +43,8 @@ public class PhoneCamera : MonoBehaviour
         background.texture = backCam;
 
         camAvailable = true;
+
+        StartCoroutine(GetQRCode());
     }
 
     void Update()
@@ -47,14 +53,55 @@ public class PhoneCamera : MonoBehaviour
             return;
 
         float ratio = (float)backCam.width / (float)backCam.height;
-        //float ratio = (float)Screen.width / (float)Screen.height;
         fit.aspectRatio = ratio;
 
         float scaleY = backCam.videoVerticallyMirrored ? -1.0f : 1.0f;
         //background.rectTransform.localScale = new Vector3(1.0f, scaleY, 1.0f);
-        background.rectTransform.localScale = new Vector3(1.0f, scaleY, 1.0f)*ratio;
+        background.rectTransform.localScale = new Vector3(1.0f, scaleY, 1.0f)*ratio*1.2f;
 
         int orient = -backCam.videoRotationAngle;
         background.rectTransform.localEulerAngles = new Vector3(0.0f, 0.0f, orient);
     }
+
+    IEnumerator GetQRCode()
+    {
+        IBarcodeReader barCodeReader = new BarcodeReader();
+        backCam.Play();
+        var snap = new Texture2D(backCam.width, backCam.height, TextureFormat.ARGB32, false);
+        while (string.IsNullOrEmpty(QrCode))
+        {
+            try
+            {
+                snap.SetPixels32(backCam.GetPixels32());
+                var Result = barCodeReader.Decode(snap.GetRawTextureData(), backCam.width, backCam.height, RGBLuminanceSource.BitmapFormat.ARGB32);
+                if (Result != null)
+                {
+                    QrCode = Result.Text;
+                    if (!string.IsNullOrEmpty(QrCode))
+                    {
+                        Debug.Log("DECODED TEXT FROM QR: " + QrCode);
+                        break;
+                    }
+                }
+            }
+            catch (Exception ex) { Debug.LogWarning(ex.Message); }
+            yield return null;
+        }
+        backCam.Stop();
+    }
+    
+    private void OnGUI()
+    {
+        int w = Screen.width, h = Screen.height;
+
+        GUIStyle style = new GUIStyle();
+
+        Rect rect = new Rect(0, 0, w, h );
+        style.alignment = TextAnchor.MiddleCenter;
+        style.fontSize = h * 2 / 50;
+        style.normal.textColor = new Color(1.0f, 0.0f, 0.0f, 1.0f);
+        string text = QrCode;
+        GUI.Label(rect, text, style);
+    }
+
 }

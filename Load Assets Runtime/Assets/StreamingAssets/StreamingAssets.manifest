@@ -1,7 +1,10 @@
 ManifestFileVersion: 0
-CRC: 2591406353
+CRC: 2610624608
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
       Name: testing
+      Dependencies: {}
+    Info_1:
+      Name: cuartonewvegas
       Dependencies: {}

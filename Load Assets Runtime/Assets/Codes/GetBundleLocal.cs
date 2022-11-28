@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-public class TestBuncle : MonoBehaviour
+public class GetBundleLocal : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Hola");
         //AssetBundle bundle = AssetBundle.LoadFromFile(Path.Combine(Application.streamingAssetsPath, "testing"));
-        AssetBundle bundle = AssetBundle.LoadFromFile(@"Assets\StreamingAssets\testing");
+        AssetBundle bundle = AssetBundle.LoadFromFile(@"Assets\Temp\cuartonewvegas");
         if (bundle == null)
         {
             return;
@@ -23,13 +21,12 @@ public class TestBuncle : MonoBehaviour
             Instantiate(obj);
         }*/
 
-        Object obj = bundle.LoadAsset("Cube");
+        Object obj = bundle.LoadAsset("Cuarto");
         Instantiate(obj);
 
         bundle.Unload(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         
