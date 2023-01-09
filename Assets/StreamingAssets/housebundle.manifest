@@ -1,0 +1,39 @@
+ManifestFileVersion: 0
+CRC: 3421374029
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3809434d17e465e6709086b64ad23a57
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: a8a8989bfbd5286d1859b97ee56c2279
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: fcb587e9f8cc9db41b9d593614afbd51, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d40610abc91d6fe48b8d9b202b45c5ff, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Prefabs/House.prefab
+Dependencies: []

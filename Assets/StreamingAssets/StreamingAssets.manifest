@@ -1,0 +1,7 @@
+ManifestFileVersion: 0
+CRC: 2068976418
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: housebundle
+      Dependencies: {}
