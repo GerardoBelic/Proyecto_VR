@@ -12,15 +12,15 @@ https://youtu.be/Fm8lmFCM8ls
 
 ## Features
 ### Addition/removal of furniture
-![Addition and removal of furniture](https://imgur.com/iUgggWu.gif)
+![Addition and removal of furniture](./markdown/furniture_change.gif)
 ### Customize the house materials
-![Customize the house materials](https://imgur.com/rFbliLI.gif)
+![Customize the house materials](./markdown/house_materials.gif)
 ### Change between rooms
-![Change between rooms](https://imgur.com/QdPndU9.gif)
+![Change between rooms](./markdown/room_change.gif)
 ### Free exploration
-![Free exploration](https://i.imgur.com/Q09zzqo.gif)
+![Free exploration](./markdown/free_exploration.gif)
 ### VR app
-![VR app](https://imgur.com/Ut4XZ6c.gif)
+![VR app](./markdown/vr_app.gif)
 
 ## Downloads
 
