@@ -1,26 +1,19 @@
 ﻿# Tu Casa VR
 One of the principal purposes of virtual reality (VR) is exploring environments which are hard to access (or just impossible). With this application I envisioned the ability to delve into an architectonic setting which we can personalize to increase the likelihood of selling a property to a client.
-Here is a demo of the app, available in Youtube:
-[![Video to a demo of Tu Casa VR](https://img.youtube.com/vi/Fm8lmFCM8ls/0.jpg)](https://www.youtube.com/watch?v=Fm8lmFCM8ls)
-https://youtu.be/Fm8lmFCM8ls
-
 ## Objectives
 
  - Explore the 3D model of a house/apartment with VR visors
  - Customize the interiors (i.e. furniture) and exteriors (i.e. house materials) to the liking of a potential client.
  - Create the 3D models and have a mechanism to download them without hard-coding them directly into the app.
+## Demo
+Here is a demo of the app, available in **Youtube**:
 
-## Features
-### Addition/removal of furniture
-![Addition and removal of furniture](./markdown/furniture_change.gif)
-### Customize the house materials
-![Customize the house materials](./markdown/house_materials.gif)
-### Change between rooms
-![Change between rooms](./markdown/room_change.gif)
-### Free exploration
-![Free exploration](./markdown/free_exploration.gif)
-### VR app
-![VR app](./markdown/vr_app.gif)
+[![Video to a demo of Tu Casa VR](https://img.youtube.com/vi/Fm8lmFCM8ls/0.jpg)](https://www.youtube.com/watch?v=Fm8lmFCM8ls)
+
+https://youtu.be/Fm8lmFCM8ls
+
+## Visual features
+To see all the features in Tu Casa VR, check [this link](https://imgur.com/gallery/l7kzhZf).
 
 ## Downloads
 
