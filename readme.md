@@ -13,7 +13,7 @@ Here is a demo of the app, available in **Youtube**:
 https://youtu.be/Fm8lmFCM8ls
 
 ## Visual features
-To see all the features in Tu Casa VR, check [this link](https://imgur.com/gallery/l7kzhZf).
+To see all the features in Tu Casa VR, check [this link](https://imgur.com/a/l7kzhZf).
 
 ## Downloads
 
